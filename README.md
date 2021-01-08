@@ -3,7 +3,7 @@
 Some quick and simple tools to make developer life easier.
 
 ## Install
-- Clone or download to `app/code/Abc`
+- Clone or download to `app/code/Abc` (Abc so it's easy to find)
 - Run `bin/magento setup:upgrade`
 
 
