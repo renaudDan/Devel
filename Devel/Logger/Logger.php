@@ -49,6 +49,8 @@ class Logger extends \Monolog\Logger
 
         if( method_exists($obj, 'getData') ){
             $data = ['data' => $obj->getData()];
+        } elseif ( method_exists($obj, '__toString') ){
+            $data = ['toString' => $obj->__toString()];
         } else {
             $data = ['get_object_vars' => get_object_vars($obj)];
         }
