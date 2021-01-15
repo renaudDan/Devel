@@ -3,8 +3,7 @@
 Some quick and simple tools to make developer life easier.
 
 ## Install
-- Clone this repo or download it.
-- Place the Abc directory under app/code
+- Clone or download to `app/code/Abc` (Abc so it's easy to find)
 - Run `bin/magento setup:upgrade`
 
 
