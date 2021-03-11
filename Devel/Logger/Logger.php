@@ -9,6 +9,7 @@ class Logger extends \Monolog\Logger
     {
         if (null === $arg) {
             $this->logDefault('(null) NULL', $callSpot);
+            return;
         }
 
         $type = gettype($arg);
