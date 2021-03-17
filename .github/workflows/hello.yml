@@ -1,8 +1,9 @@
 name: Hello-World
 
-# Run this workflow every time a new commit pushed to your repository
-# Todo change this to PR
-on: push
+# Run this workflow on PRs
+on:
+  pull_request:
+    types: [opened, edited]
 
 jobs:
   # Set the job key. The key is displayed as the job name
@@ -14,13 +15,15 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
+      # Checkout repository
       - name: Get Code
         uses: actions/checkout@v2
+      # Setup php environment
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '7.3'
           tools: phpunit:6
+      # Run our script
       - name: Run Hello World
         run: php Devel/scripts/helloWorld.php
